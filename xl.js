@@ -20,6 +20,9 @@ module.exports = function (RED) {
             if(msg.payload === undefined || msg.payload === null){
                 console.log("Payload cannot be blank");
                 node.error("payload cannot be null");
+            }else if(!Array.isArray(msg.payload)){
+                console.log("Payload must be Array");
+                node.error("payload must be Array");
             }else{
                 json2xl.j2e({
                     sheets      :msg.payload,
@@ -32,5 +35,5 @@ module.exports = function (RED) {
         
     };
 
-    RED.nodes.registerType("excel", ConvertJSONToExcel);
+    RED.nodes.registerType("excelsheets", ConvertJSONToExcel);
 }

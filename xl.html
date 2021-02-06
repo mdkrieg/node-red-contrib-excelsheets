@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('excel',{
+    RED.nodes.registerType('excelsheets',{
         category: 'function',
         color: '#6B8E23',
         defaults: {
@@ -8,19 +8,19 @@
         },
         inputs:1,
         outputs:1,
-        icon: "file.png",
+        icon: "excel.png",
         align: 'right',
-        paletteLabel:"excel",
+        paletteLabel:"excel sheets",
         label: function() {
-            return this.name||"excel";
+            return this.name||"excel sheets";
         }
     });
 </script>
 
-<script type="text/x-red" data-template-name="excel">
+<script type="text/x-red" data-template-name="excelsheets">
     
     <div class="form-row">
-        <label for="node-input-file"><i class="icon-tag"></i> File *</label>
+        <label for="node-input-file"><i class="icon-tag"></i> File</label>
         <input type="text" id="node-input-file" placeholder="/home/app/output.xlsx">
     </div>
     
@@ -31,7 +31,7 @@
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="excel">
+<script type="text/x-red" data-help-name="excelsheets">
     <p>Converts a JSON or array of JSONs to excel and writes to the file specified</p>
     <p>Expects the JSON to be msg.payload</p>
     <p>File path can be configured on node or set as msg.filepath </p>
