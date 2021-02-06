@@ -1,7 +1,7 @@
 <script type="text/javascript">
     RED.nodes.registerType('excelsheets',{
         category: 'parser',
-        color: '#6B8E23',
+        color: '#9BAE53',
         defaults: {
             name: {value:""},
             file: {value:""}
@@ -32,7 +32,25 @@
 </script>
 
 <script type="text/x-red" data-help-name="excelsheets">
-    <p>Converts a JSON or array of JSONs to excel and writes to the file specified</p>
-    <p>Expects the JSON to be msg.payload</p>
-    <p>File path can be configured on node or set as msg.filepath </p>
+    <p>Node for creating excel files with one or multiple sheets</p>
+    <h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>msg.payload
+           <span class="property-type">array</span>
+       </dt>
+        <h3>Details</h3>
+        <p>Payload consists of two objects:</p>
+            <dt>header
+               <span class="property-type">object</span>
+           </dt>
+           <p>Matches arbitrary keys to readable column titles</p>
+            <dt>items
+               <span class="property-type">array</span>
+           </dt>
+           <p>Collection of objects that match the keys defined in "header", contains values to be saved in the table</p>
+       <dt>msg.filename
+           <span class="property-type">string</span>
+       </dt>
+        <h3>Details</h3>
+        <p>Used to specify the filename if not specified on the node's config page</p>
 </script>
