@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/mdkrieg/node-red-contrib-json2excel/issues"
   },
-  "homepage": "https://github.com/mdkrieg/node-red-contrib-json2excel#readme"
+  "homepage": "https://github.com/mdkrieg/node-red-contrib-json2excel#readme",
+  "dependencies": {
+    "json2excel": "^1.2.0"
+  }
 }
