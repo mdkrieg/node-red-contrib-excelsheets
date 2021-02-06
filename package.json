@@ -16,6 +16,11 @@
     "xlsx"
   ],
   "author": "Matthew Krieg",
+  "node-red": {
+    "nodes": {
+      "excel": "j2e.js"
+    }
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mdkrieg/node-red-contrib-json2excel/issues"
