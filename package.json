@@ -17,7 +17,7 @@
   "author": "Matthew Krieg",
   "node-red": {
     "nodes": {
-      "excel": "xl.js"
+      "excelsheets": "xl.js"
     }
   },
   "license": "MIT",
