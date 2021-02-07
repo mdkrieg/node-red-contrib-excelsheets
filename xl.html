@@ -39,18 +39,24 @@
            <span class="property-type">array</span>
        </dt>
         <h3>Details</h3>
-        <p>Payload consists of two objects:</p>
-            <dt>header
-               <span class="property-type">object</span>
-           </dt>
-           <p>Matches arbitrary keys to readable column titles</p>
-            <dt>items
-               <span class="property-type">array</span>
-           </dt>
-           <p>Collection of objects that match the keys defined in "header", contains values to be saved in the table</p>
+        <p>Payload contains of an array of "sheet" objects:</p>
+            <dl class="message-properties" style="padding-left:8px;padding-right:5px;">
+                <dt>header
+                   <span class="property-type">object</span>
+               </dt>
+               <p>Matches arbitrary keys to readable column titles</p>
+                <dt>items
+                   <span class="property-type">array</span>
+               </dt>
+               <p>Items contains an array of "row" objects whose keys match the keys defined in "header"</p>
+                <dt>sheetName
+                   <span class="property-type">string</span>
+               </dt>
+               <p>Name of this sheet</p>
+            </dl>
        <dt>msg.filename
            <span class="property-type">string</span>
-       </dt>
+       </dt>:
         <h3>Details</h3>
         <p>Used to specify the filename if not specified on the node's config page</p>
 </script>
