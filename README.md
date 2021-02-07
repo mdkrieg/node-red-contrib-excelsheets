@@ -40,5 +40,5 @@ filename: "output.xlsx"
 * 1.0.3 - Cleanup and documentation.
 
 ## TODO
-- [ ] Digging deeper into the dependencies, there's a really powerful package called "xlsx" [npmjs.com](https://www.npmjs.com/package/xlsx) that has a rich base of features, I would like to create a node that uses everything available.
+- [ ] Digging deeper into the dependencies, there's a really powerful package called "xlsx" [<npmjs.com>](https://www.npmjs.com/package/xlsx) that has a rich base of features, I would like to create a node that uses everything available.
 - [ ] Come up with a few examples that do something more interesting
