@@ -33,12 +33,12 @@ payload: [
 filename: "output.xlsx"
 ```
 
-# Change Log
-1.0.0 - Original version, forked from "node-red-contrib-excel" and swapped out a different dependency.
-1.0.1 - Cleanup.
-1.0.2 - Cleanup and documentation.
-1.0.3 - Cleanup and documentation.
+## Change Log
+* 1.0.0 - Original version, forked from "node-red-contrib-excel" and swapped out a different dependency.
+* 1.0.1 - Cleanup.
+* 1.0.2 - Cleanup and documentation.
+* 1.0.3 - Cleanup and documentation.
 
-# TODO
-[ ] - Digging deeper into the dependencies, there's a really powerful package called "xlsx" (npmjs.com)[https://www.npmjs.com/package/xlsx] that has a rich base of features, I would like to create a node that uses everything available.
-[ ] - Come up with a few examples that do something more interesting
+## TODO
+- [ ] Digging deeper into the dependencies, there's a really powerful package called "xlsx" (npmjs.com)[https://www.npmjs.com/package/xlsx] that has a rich base of features, I would like to create a node that uses everything available.
+- [ ] Come up with a few examples that do something more interesting
