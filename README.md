@@ -30,15 +30,14 @@ payload: [
     {header, items, sheetName} ,
     ...
 ] ,
-filename: "output.xlsx"
+filepath: "output.xlsx"
 ```
 
 ## Change Log
-* 1.0.0 - Original version, forked from "node-red-contrib-excel" and swapped out a different dependency.
-* 1.0.1 - Cleanup.
-* 1.0.2 - Cleanup and documentation.
-* 1.0.3 - Cleanup and documentation.
+* 1.0.5 - Updated docs to refer to correct msg property: filepath (not filename, )
 * 1.0.4 - Additional Example "basic w server". Cleanup and documentation.
+* 1.0.1 ~ 3 - Cleanup and documentation.
+* 1.0.0 - Original version, forked from "node-red-contrib-excel" and swapped out a different dependency.
 
 ## TODO
 - [ ] Give richer status feedback / error feedback
