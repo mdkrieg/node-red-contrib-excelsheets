@@ -33,13 +33,15 @@
 
 <script type="text/x-red" data-help-name="excelsheets">
     <p>Node for creating excel files with one or multiple sheets</p>
+    <a href="https://github.com/mdkrieg/node-red-contrib-excelsheets#readme">View README on GitHub</a> 
     <h3>Inputs</h3>
     <dl class="message-properties">
         <dt>msg.payload
-           <span class="property-type">array</span>
+           <span class="property-type">Array or Object</span>
        </dt>
         <h3>Details</h3>
-        <p>Payload contains of an array of "sheet" objects:</p>
+        <p>Payload can be in one of two formats,</p>
+        <p>Standard format contains of an array of "sheet" objects:</p>
             <dl class="message-properties" style="padding-left:8px;padding-right:5px;">
                 <dt>header
                    <span class="property-type">object</span>
@@ -54,6 +56,32 @@
                </dt>
                <p>Name of this sheet</p>
             </dl>
+        <p>Flexible format contains of an object of sheets (named via object key), and contains an array of arbitrary objects:</p>
+<pre>
+payload: {
+    sheet1: [
+        header1: "data",
+        header2: "data",
+        header3:{
+            sub1: "data",
+            sub2: "data"
+        }
+    ],
+    sheet2: [
+        header1: "data",
+        header2: "data"
+    ],
+    sheet3: [
+        header1: "data",
+        header2: "data"
+    ]
+}
+</pre>
+        <p>When using the "Flexible" format, the headers are automatically determined from the key names. If the data in the sheet is nested in multiple objects, the path to that data is concatenated with hyphens recursively.</p>
+        
+        <p>For the example above: sheet1, will have four headers: "header1", "header2", "header3-sub1", and "header3-sub2". sheet2 and sheet3 will just have "header1" and "header2". Furthermore, the headers do **not** need to be consistent, even in the same sheet. Unique headers are added to the header list when they are encountered.</p>
+        
+        <p>The output of the node will always transform the data into the "Standard" format.</p>
        <dt>msg.filepath
            <span class="property-type">string</span>
        </dt>:
