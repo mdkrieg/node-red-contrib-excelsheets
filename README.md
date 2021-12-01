@@ -63,6 +63,7 @@ For the example above: sheet1, will have four headers: "header1", "header2", "he
 The output of the node will always transform the data into the "Standard" format.
 
 ## Change Log
+* 1.1.1 - Fixed problem with "Standard" input.
 * 1.1.0 - Created "Flexible" input option that parses object keys as sheet names and recursively parses multi-level objects in the row data
 * 1.0.5 - Updated docs to refer to correct msg property: filepath (not filename, )
 * 1.0.4 - Additional Example "basic w server". Cleanup and documentation.
