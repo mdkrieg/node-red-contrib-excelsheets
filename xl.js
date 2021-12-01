@@ -19,7 +19,7 @@ module.exports = function (RED) {
                 node.error("payload cannot be null");
                 return;
             }
-            if(isObject(msg.payload)){
+            if(isObject(msg.payload) && !Array.isArray(msg.payload)){
                 msg.payload = convertObjectToArray(msg.payload);
             }
             json2xl.j2e({
